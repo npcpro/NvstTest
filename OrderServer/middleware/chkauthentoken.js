@@ -3,9 +3,7 @@ const root = require('path').dirname(require.main.filename);
 
 module.exports = async (req, res, next) => {
        try {
-         let field =  await fs.readFileSync(root+'/order_field.pub','utf-8').replace(/(\r\n|\n|\r|s)/gm,"").trim().toLowerCase()
-         let token =  await fs.readFileSync(root+'/order.pub','utf-8').replace(/(\r\n|\n|\r|s)/gm,"").trim().toLowerCase()
-         if(req.headers[field] === token){
+         if(req.headers.token === 'aaa'){
            next()
          }else {
            console.log('invalid token');
