@@ -1,0 +1,11 @@
+cd OrderServer 
+node ./server.js 
+/// start server order ฐาน ข้อมุล  บน mlab db order
+
+cd ProductServer 
+node ./server.js 
+/// start server product ฐาน ข้อมุล บน mlab db product
+
+cd UserServer 
+node ./server.js 
+/// start server user ฐาน ข้อมุล  บน mlab db user
